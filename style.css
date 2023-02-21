@@ -150,6 +150,16 @@ body {
   .title {
     width: 34% !important;
   }
+  .intro {
+    padding-left: 0.1rem !important;
+  }
+}
+
+/* break pointt -> 500px */
+@media screen and (min-width: 500px) {
+  .intro {
+    padding-left: 0 !important;
+  }
 }
 
 /* break pointt -> 550px */
@@ -180,13 +190,16 @@ body {
 /* break pointt -> 992px */
 @media screen and (min-width: 992px) {
   .profile-pic {
-    height: 26rem;
+    height: 30rem;
   }
   .vh-lg-100 {
     height: 100vh;
   }
   .title {
     width: 26% !important;
+  }
+  .intro {
+    padding-left: 6rem !important;
   }
 }
 
