@@ -102,6 +102,7 @@ body {
   );
   border-radius: 5px;
   padding: 0.2rem;
+  box-shadow: 14px 14px 20px black;
 }
 
 /* 8- skill-item */
@@ -118,7 +119,8 @@ body {
 .grid-3x3 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.4rem;
+  gap: 2rem;
+  /* grid-auto-flow: column; */
 }
 
 /* 10- height 50vh */
@@ -208,9 +210,9 @@ body {
   .profile-pic {
     height: 32rem;
   }
-  .grid-3x3 {
+  /* .grid-3x3 {
     gap: 2rem;
-  }
+  } */
 
   .title {
     width: 28% !important;
