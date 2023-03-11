@@ -7,13 +7,16 @@
       4- defined colors
       5- background colors
       6- rainbow-text
-      5- height 100vh
-      7- rainbow-border
-      8- skill-item
-      9- grid 3 by 3 
-      10- height 50vh
-      11- profile-pic
-      12- media queries
+      7- height 100vh
+      8.0- rainbow-border
+         8.1- rainbow-border::before
+         8.2- rotate::before
+         8.3- @keyframes spin
+      9- skill-item
+      10- grid 3 by 3 
+      11- height 50vh
+      12- profile-pic
+      13- media queries
           >>> break pointt -> 350px
               >>> project-title
           >>> break pointt -> 400px
@@ -23,7 +26,7 @@
               >>> vh-lg-10
           >>> break pointt -> 1200px
           >>> break pointt -> 1400px
-      13- background pattern
+      14- background pattern
 
 */
 
@@ -61,51 +64,80 @@ body {
 
 /* 6- rainbow-text */
 .rainbow-text {
-  background: linear-gradient(
-    90deg,
-    #00ffff,
-    #00ffff,
-    #00ffff,
-    #009898,
-    #0f0fff,
-    #4141ff,
-    #8000ff,
-    #dd00ff,
-    #dd00ff,
-    #dd00ff
-  );
+  background: linear-gradient(90deg,
+      #00ffff,
+      #00ffff,
+      #00ffff,
+      #009898,
+      #0f0fff,
+      #4141ff,
+      #8000ff,
+      #dd00ff,
+      #dd00ff,
+      #dd00ff);
   color: #0000;
   -webkit-background-clip: text;
   background-clip: text;
 }
 
-/* 5- height 100vh */
+/* 7- height 100vh */
 .vh-100 {
   height: 100vh;
 }
 
-/* 7- rainbow-border */
+/* 8.0- rainbow-border */
 .rainbow-border {
   display: inline-block;
-  background: linear-gradient(
-    135deg,
-    #00ffff,
-    #00ffff,
-    #00ffff,
-    #046666,
-    #0000ff,
-    #0000ff,
-    #8000ff,
-    #dd00ff,
-    #dd00ff,
-    #dd00ff
-  );
   border-radius: 5px;
   padding: 0.2rem;
   box-shadow: 14px 14px 20px black;
+  position: relative;
+  overflow: hidden;
+}
+/* 8.1- rainbow-border::before */
+.rainbow-border::before {
+  position: absolute;
+  content: "";
+  width: 400%;
+  height: 150%;
+  background: linear-gradient(45deg,
+      #00ffff,
+      #00ffff,
+      #00ffff,
+      #00ffff,
+      #00ffff,
+      #00ffff,
+      #00ffff,
+      #00ffff,
+      #258bff,
+      #0000ff,
+      #0000ff,
+      #8000ff,
+      #dd00ff,
+      #dd00ff,
+      #dd00ff,
+      #dd00ff,
+      #dd00ff,
+      #dd00ff,
+      #dd00ff,
+      #dd00ff);
+  left: -150%;
+  top: -25%;
+  z-index: -1;
+}
+/* 8.2- rotate::before */
+.rotate::before {
+  animation: spin 5s infinite linear;
+
+}
+/* 8.3- @keyframes spin */
+@keyframes spin {
+  100% {
+    transform: rotate(-360deg);
+  }
 }
 
-/* 8- skill-item */
+/* 9- skill-item */
 .skill-item {
   background-color: var(--ligh-gray);
   width: 8rem;
@@ -115,7 +147,8 @@ body {
   justify-content: center;
   border-radius: 5px;
 }
-/* 9- grid 3 by 3 */
+
+/* 10- grid 3 by 3 */
 .grid-3x3 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -123,22 +156,23 @@ body {
   /* grid-auto-flow: column; */
 }
 
-/* 10- height 50vh */
+/* 11- height 50vh */
 .vh-50 {
   height: 50vh;
 }
 
-/* 11- profile-pic */
+/* 12- profile-pic */
 .profile-pic {
   max-height: 100%;
 }
 
-/* 12- media quereis */
+/* 13- media quereis */
 /* break pointt -> 350px */
 @media screen and (min-width: 350px) {
   .profile-pic {
     height: 24rem;
   }
+
   .title {
     width: 50% !important;
   }
@@ -149,9 +183,11 @@ body {
   .profile-pic {
     height: 26rem;
   }
+
   .title {
     width: 34% !important;
   }
+
   .intro {
     padding-left: 0.1rem !important;
   }
@@ -169,6 +205,7 @@ body {
   .profile-pic {
     height: 26rem;
   }
+
   .grid-3x3 {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -184,6 +221,7 @@ body {
     width: 9rem;
     height: 9rem;
   }
+
   .title {
     width: 24% !important;
   }
@@ -194,12 +232,15 @@ body {
   .profile-pic {
     height: 30rem;
   }
+
   .vh-lg-100 {
     height: 100vh;
   }
+
   .title {
     width: 26% !important;
   }
+
   .intro {
     padding-left: 6rem !important;
   }
@@ -210,6 +251,7 @@ body {
   .profile-pic {
     height: 32rem;
   }
+
   /* .grid-3x3 {
     gap: 2rem;
   } */
@@ -226,26 +268,21 @@ body {
   }
 }
 
-/* background pattern */
+/* 14- background pattern */
 .bg-pattern {
   background: conic-gradient(from 90deg at 2px 2px, #0000 25%, #242c37 0) -1px -1px,
-    linear-gradient(
-      -45deg,
+    linear-gradient(-45deg,
       #242c37 15%,
       #2c3343 0 28%,
       #0000 0 72%,
       #2c3343 0 85%,
-      #242c37 0
-    ),
-    linear-gradient(
-      45deg,
+      #242c37 0),
+    linear-gradient(45deg,
       #242c37 15%,
       #2c3343 0 28%,
       #0000 0 72%,
       #2c3343 0 85%,
-      #242c37 0
-    ),
-    conic-gradient(from 90deg at 40% 40%, #242c37 25%, #2c3343 0)
-      calc(10px / -5) calc(10px / -5);
+      #242c37 0),
+    conic-gradient(from 90deg at 40% 40%, #242c37 25%, #2c3343 0) calc(10px / -5) calc(10px / -5);
   background-size: 10px 10px;
 }
