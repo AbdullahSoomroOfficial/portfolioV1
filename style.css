@@ -64,17 +64,19 @@ body {
 
 /* 6- rainbow-text */
 .rainbow-text {
-  background: linear-gradient(90deg,
-      #00ffff,
-      #00ffff,
-      #00ffff,
-      #009898,
-      #0f0fff,
-      #4141ff,
-      #8000ff,
-      #dd00ff,
-      #dd00ff,
-      #dd00ff);
+  background: linear-gradient(
+    90deg,
+    #00ffff,
+    #00ffff,
+    #00ffff,
+    #009898,
+    #0f0fff,
+    #4141ff,
+    #8000ff,
+    #dd00ff,
+    #dd00ff,
+    #dd00ff
+  );
   color: #0000;
   -webkit-background-clip: text;
   background-clip: text;
@@ -100,27 +102,29 @@ body {
   content: "";
   width: 400%;
   height: 150%;
-  background: linear-gradient(45deg,
-      #00ffff,
-      #00ffff,
-      #00ffff,
-      #00ffff,
-      #00ffff,
-      #00ffff,
-      #00ffff,
-      #00ffff,
-      #258bff,
-      #0000ff,
-      #0000ff,
-      #8000ff,
-      #dd00ff,
-      #dd00ff,
-      #dd00ff,
-      #dd00ff,
-      #dd00ff,
-      #dd00ff,
-      #dd00ff,
-      #dd00ff);
+  background: linear-gradient(
+    45deg,
+    #00ffff,
+    #00ffff,
+    #00ffff,
+    #00ffff,
+    #00ffff,
+    #00ffff,
+    #00ffff,
+    #00ffff,
+    #258bff,
+    #0000ff,
+    #0000ff,
+    #8000ff,
+    #dd00ff,
+    #dd00ff,
+    #dd00ff,
+    #dd00ff,
+    #dd00ff,
+    #dd00ff,
+    #dd00ff,
+    #dd00ff
+  );
   left: -150%;
   top: -25%;
   z-index: -1;
@@ -128,7 +132,6 @@ body {
 /* 8.2- rotate::before */
 .rotate::before {
   animation: spin 5s infinite linear;
-
 }
 /* 8.3- @keyframes spin */
 @keyframes spin {
@@ -163,6 +166,7 @@ body {
 
 /* 12- profile-pic */
 .profile-pic {
+  height: 18rem;
   max-height: 100%;
 }
 
@@ -170,7 +174,7 @@ body {
 /* break pointt -> 350px */
 @media screen and (min-width: 350px) {
   .profile-pic {
-    height: 24rem;
+    height: 21rem;
   }
 
   .title {
@@ -203,7 +207,7 @@ body {
 /* break pointt -> 550px */
 @media screen and (min-width: 550px) {
   .profile-pic {
-    height: 26rem;
+    height: 28rem;
   }
 
   .grid-3x3 {
@@ -271,18 +275,23 @@ body {
 /* 14- background pattern */
 .bg-pattern {
   background: conic-gradient(from 90deg at 2px 2px, #0000 25%, #242c37 0) -1px -1px,
-    linear-gradient(-45deg,
+    linear-gradient(
+      -45deg,
       #242c37 15%,
       #2c3343 0 28%,
       #0000 0 72%,
       #2c3343 0 85%,
-      #242c37 0),
-    linear-gradient(45deg,
+      #242c37 0
+    ),
+    linear-gradient(
+      45deg,
       #242c37 15%,
       #2c3343 0 28%,
       #0000 0 72%,
       #2c3343 0 85%,
-      #242c37 0),
-    conic-gradient(from 90deg at 40% 40%, #242c37 25%, #2c3343 0) calc(10px / -5) calc(10px / -5);
+      #242c37 0
+    ),
+    conic-gradient(from 90deg at 40% 40%, #242c37 25%, #2c3343 0)
+      calc(10px / -5) calc(10px / -5);
   background-size: 10px 10px;
 }
