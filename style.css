@@ -27,10 +27,7 @@
           >>> break pointt -> 1200px
           >>> break pointt -> 1400px
       14- background pattern
-      15.0- animations
-          15.1- slideInLeft
-          15.2- slideInRight
-          15.3- zoomIn
+      15- hidden class
 
 */
 
@@ -300,54 +297,7 @@ body {
   background-size: 10px 10px;
 }
 
-/* 15.0- animations */
-
-/* 15.1- slideInLeft */
-/* @keyframes slideInLeft {
-  0% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-    visibility: visible;
-  }
-  to {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  }
+/* 15- hidden class */
+.hidden {
+  opacity: 0%;
 }
-.animate__slideInLeft {
-  -webkit-animation-name: slideInLeft;
-  animation-name: slideInLeft;
-} */
-
-/* 15.2- slideInRight */
-/* @keyframes slideInRight {
-  0% {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    visibility: visible;
-  }
-  to {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-}
-.animate__slideInRight {
-  -webkit-animation-name: slideInRight;
-  animation-name: slideInRight;
-} */
-
-/* 15.3- zoomIn */
-/* @keyframes zoomIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
-  50% {
-    opacity: 1;
-  }
-}
-.animate__zoomIn {
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
-} */
