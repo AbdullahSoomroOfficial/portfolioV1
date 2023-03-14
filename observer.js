@@ -46,7 +46,7 @@ const callbackForSocialIcons = (entries) => {
 };
 
 const options = {
-  threshold: 0.7,
+  threshold: 0.4,
 };
 
 const observerForSkills = new IntersectionObserver(callbackForSkills, options);
