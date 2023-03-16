@@ -35,7 +35,6 @@ const callbackForProjects = (entries) => {
 };
 
 const callbackForSocialIcons = (entries) => {
-  console.log("hiiiiiiiiiiiiiii");
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.remove("hidden");
