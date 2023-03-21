@@ -18,7 +18,6 @@
       12- profile-pic
       13- media queries
           >>> break pointt -> 350px
-              >>> project-title
           >>> break pointt -> 400px
           >>> break pointt -> 550px
           >>> break pointt -> 768px
@@ -152,8 +151,8 @@ body {
   border-radius: 5px;
 }
 
-/* 10- grid 3 by 3 */
-.grid-3x3 {
+/* 10- grid */
+.grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
@@ -177,20 +176,12 @@ body {
   .profile-pic {
     height: 21rem;
   }
-
-  .title {
-    width: 50% !important;
-  }
 }
 
 /* break pointt -> 400px */
 @media screen and (min-width: 400px) {
   .profile-pic {
     height: 26rem;
-  }
-
-  .title {
-    width: 34% !important;
   }
 
   .intro {
@@ -211,12 +202,8 @@ body {
     height: 28rem;
   }
 
-  .grid-3x3 {
+  .grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .title {
-    width: 30% !important;
   }
 }
 
@@ -226,9 +213,8 @@ body {
     width: 9rem;
     height: 9rem;
   }
-
-  .title {
-    width: 24% !important;
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -242,10 +228,6 @@ body {
     height: 100vh;
   }
 
-  .title {
-    width: 26% !important;
-  }
-
   .intro {
     padding-left: 6rem !important;
   }
@@ -257,13 +239,9 @@ body {
     height: 32rem;
   }
 
-  /* .grid-3x3 {
+  /* .grid {
     gap: 2rem;
   } */
-
-  .title {
-    width: 28% !important;
-  }
 }
 
 /* break pointt -> 1400px */

@@ -13,7 +13,7 @@ const skillsArray = Array.from(skillsElements);
 const callbackForSkills = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      if (skillsArray.indexOf(entry.target) < 3) {
+      if (skillsArray.indexOf(entry.target) < 6) {
         entry.target.parentElement.classList.add("animate__slideInLeft");
       } else {
         entry.target.parentElement.classList.add("animate__slideInRight");
